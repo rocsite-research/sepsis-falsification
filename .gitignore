@@ -1,0 +1,44 @@
+# Cache and intermediate data
+cache/
+*.parquet
+*.feather
+
+# Results and run outputs
+runs/
+results*.json
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+
+# Data files — never commit patient data
+*.csv
+*.csv.gz
+*.psv
+*.parquet
+*.db
+*.sqlite
+
+# Sensitive
+*.key
+*.pem
