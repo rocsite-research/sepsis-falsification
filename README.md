@@ -6,7 +6,7 @@ And to the memory of Liane's father, who died from sepsis. This is why it matter
 
 ---
 
-**Paper:** [Falsification Testing of Sepsis Prediction Models: Evaluating Independent Biological Signal After Controlling for Care-Process Intensity](https://www.medrxiv.org/content/10.64898/2026.03.17.26348414)  
+**Paper:** [Falsification Testing of Sepsis Prediction Models: Evaluating Independent Biological Signal After Controlling for Care-Process Intensity](https://www.medrxiv.org/content/10.64898/2026.03.17.26348414v2)  
 medRxiv 2026.03.17.26348414 · v2 (corrected)
 
 **OSF Pre-Registration:** March 11, 2026 · https://osf.io/9tbjm  
@@ -95,7 +95,7 @@ sepsis_falsification/
 
 > Dickens, A. (2026). Falsification Testing of Sepsis Prediction Models:
 > Evaluating Independent Biological Signal After Controlling for Care-Process Intensity.
-> *medRxiv* 2026.03.17.26348414. https://www.medrxiv.org/content/10.64898/2026.03.17.26348414
+> *medRxiv* 2026.03.17.26348414v2. https://www.medrxiv.org/content/10.64898/2026.03.17.26348414v2
 
 ---
 
