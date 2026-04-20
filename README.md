@@ -99,6 +99,49 @@ sepsis_falsification/
 
 ---
 
+## Extension Studies
+
+In addition to the four pre-registered phases, the manuscript reports
+supporting analyses run after the primary results were locked:
+
+- **Phase 1 bootstrap CIs** — `bootstrap_jaccard_ci.py` computes 95%
+  bootstrap confidence intervals (1,000 iterations, seed=42) for the
+  three pairwise Jaccard similarities and the mean Jaccard across
+  datasets. Output is formatted for direct insertion into Tables 2–3
+  of the manuscript.
+
+  ```bash
+  python bootstrap_jaccard_ci.py --demo
+  python bootstrap_jaccard_ci.py --labels_file labels.parquet
+  ```
+
+These are supplementary to the four-phase result and do not change
+the pre-registered verdict.
+
+---
+
+## Replication Package
+
+A self-contained replication runner lives in `replication/`. It
+reproduces all four phases end-to-end on MIMIC-IV v3.1 and writes
+output in the published JSON schema so you can diff your run against
+the paper's reported values.
+
+```bash
+cd replication/
+pip install -r requirements.txt
+python replication_runner.py \
+    --dataset_path /path/to/mimic-iv-3.1/ \
+    --output_dir ./replication_run_mimic_iv
+```
+
+See `replication/README.md` for per-dataset guidance. MIMIC-III,
+eICU-CRD, and PhysioNet/CinC 2019 require adapting `cohort.py`,
+`labels.py`, and `features.py` to the target schema per the paper
+Methods — the four-phase logic in `phases.py` is dataset-agnostic.
+
+---
+
 ## License
 
 Apache License 2.0. See LICENSE.

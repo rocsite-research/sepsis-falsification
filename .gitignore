@@ -1,44 +1,70 @@
-# Cache and intermediate data
+# ── Cache and intermediate data ──────────────────────────────────────────────
 cache/
 *.parquet
 *.feather
 
-# Results and run outputs
+# ── Results and run outputs ──────────────────────────────────────────────────
 runs/
 results*.json
+replication_run*/
+replication_results.json
+replication_summary.md
 *.log
 
-# Python
+# ── Phase 5 / post-hoc exploratory artifacts (NOT in scope for public repo) ─
+phase5_*.json
+phase5_*.py
+manifest.json
+run_summary.md
+warnings.json
+pipeline.log
+
+# ── Protected internal pipeline (NEVER commit) ───────────────────────────────
+base_pipeline.py
+mimic_iv_pipeline.py
+mimic_iii_pipeline.py
+eicu_pipeline.py
+challenge_pipeline.py
+run_recorder.py
+
+# ── Secrets and environment ──────────────────────────────────────────────────
+.env
+*.env
+env/
+venv/
+*password*
+*secret*
+*token*
+*.key
+*.pem
+
+# ── Agent/project-local instructions (never publish) ─────────────────────────
+CLAUDE.md
+*.sh
+
+# ── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
-.env
-env/
-venv/
 *.egg-info/
 dist/
 build/
 
-# macOS
-.DS_Store
-__MACOSX/
-
-# Jupyter
+# ── Jupyter ──────────────────────────────────────────────────────────────────
 .ipynb_checkpoints/
 *.ipynb
 
-# IDE
+# ── IDE ──────────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 
-# Data files — never commit patient data
+# ── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+__MACOSX/
+
+# ── Data files — never commit patient data ───────────────────────────────────
 *.csv
 *.csv.gz
 *.psv
-*.parquet
 *.db
 *.sqlite
-
-# Sensitive
-*.key
-*.pem
